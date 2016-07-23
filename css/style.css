@@ -1,6 +1,5 @@
 @font-face {
     font-family: "League Gothic";
-    src: url('leaguegothic-regular-webfont.eot');
     src: url('leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('leaguegothic-regular-webfont.woff2') format('woff2'),
          url('leaguegothic-regular-webfont.woff') format('woff'),
@@ -21,7 +20,6 @@ body {
 .header {
 	height: 244px;
 	margin-top: 61px;
-
 }
 .header__logo {
 	display: block;
@@ -29,7 +27,7 @@ body {
 	text-decoration: none;
 	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 	color: white;
-	font: 400 48px "League Gothic";
+	font: 400 48px "League Gothic", Tahoma;
 	text-align: center;
 	letter-spacing: -0.6px;
 }
@@ -75,6 +73,21 @@ body {
 	line-height: 24px;
 	letter-spacing: -0.3px;
 }
+.slider__arrow1, .slider__arrow2 {
+	width: 32px;
+	height: 42px;
+	margin-top: 10%;
+	background: url(../img/arrows.png) no-repeat;
+}
+.slider__arrow1 {
+	float: left;
+	margin-left: 5.4%;
+}
+.slider__arrow2 {
+	float: right;
+	margin-right: 5.4%;
+	background-position: -32px 0px;
+}
 .slider__nav {
 	clear: both;
 	width: 88px;
@@ -110,7 +123,6 @@ body {
 	color: #000;
 }
 .blurbs {
-	
 	border-top: 1px solid #35273b;
 	background-image: -webkit-linear-gradient(bottom, #322539 0%, #745083 100%);
 	background-image: -o-linear-gradient(bottom, #322539 0%, #745083 100%);
@@ -125,14 +137,8 @@ body {
 	text-shadow: 0.5px 0.9px 0 #0f1518;
 	padding-left: 50px;
 }
-.blurbs__item1 {
+.blurbs__item1, .blurbs__item2, .blurbs__item3 {
 	background: url(../img/icons.png) -77px 9px no-repeat;
-}
-.blurbs__item2 {
-	background: url(../img/icons.png) -41px -28px no-repeat;
-}
-.blurbs__item3 {
-	background: url(../img/icons.png) -4px -64px no-repeat;
 }
 .blurbs__title {
 	font: 400 30px "League Gothic";
@@ -143,6 +149,7 @@ body {
 	line-height: 24px;
 }
 .blurbs__more {
+	color: #fff;
 	margin-top: 17px;
 	margin-right: 13px;
 	text-transform: uppercase;
@@ -263,6 +270,9 @@ body {
 	display: table;
 	clear: both;
 }
+.news__title--960-only {
+	display: none;
+}
 .news__categories1, .news__categories2, .news__categories3 {
 	float: left;
 	margin-top: 6%;
@@ -332,6 +342,14 @@ footer {
 		height: 400px;
 		margin-bottom: 168px;
 	}
+	.slider__arrow1 {
+		margin-top: 15%;
+		margin-left: 0.4%;
+	}
+	.slider__arrow2 {
+		margin-top: 15%;
+		margin-right: 0.4%;
+	}
 	.slider__item__description {
 		float: left;
 		width: 53%;
@@ -345,7 +363,7 @@ footer {
 		font-size: 32px;
 		margin: -10px 0px 3px 0px;
 	}
-	.slider__item__image {
+	.slider__image {
 		float: right;
 		width: 28%;
 		margin: -14px 72px 0px 0px;
@@ -368,9 +386,11 @@ footer {
 	}
 	.blurbs__item2 {
 		margin-right: 5.9%;
+		background-position: -41px -28px;
 	}
 	.blurbs__item3 {
 		width: 23%;
+		background-position: -4px -64px;
 	}
 	.blurbs__text--3 {
 		margin-left: -5px;
@@ -410,7 +430,7 @@ footer {
 		margin-left: 6.4%;
 	}
 	.logos {
-		padding-top: 2.6%;
+		padding-top: 1.9%;
 	}
 	.logos1 {
 		margin-left: 9.8%;
@@ -433,6 +453,33 @@ footer {
 	}
 	.news {
 		height: 397px;		
+	}
+	.news__title--1, .news__title--2 {
+		display: none;
+	}
+	.news__title--960-only {
+		display: block;
+	}
+	.news__title1--960-only {
+		margin: -2px 0px 4px -2px;
+		letter-spacing: -2px;
+		font: 400 48px "League Gothic", Tahoma;
+		color: #454545;
+	}
+	.news__title1--960-only span {
+		color: #b9b9b9;
+	}
+	.news__subtitle--960-only {
+		color: #c5c5c5;
+		font-family: Georgia;
+		font-size: 16px;
+		font-style: italic;
+		line-height: 24px;
+		margin-bottom: 6px;
+	}
+	.news__text--960-only {
+		height: 120px;
+		overflow: hidden;
 	}
 	.news__title {
 		font-size: 30px;
@@ -477,12 +524,20 @@ footer {
 		height: 400px;
 		margin-bottom: 154px;
 	}
+	.slider__arrow1 {
+		margin-top: 23%;
+		margin-left: -0.6%;
+	}
+	.slider__arrow2 {
+		margin-top: 23%;
+		margin-right: -0.6%;
+	}
 	.slider__item__description {
 		float: left;
 		height: 200px;
 		width: 305px;
 		margin-top: 93px;
-		margin-left: 42px;
+		margin-left: 15px;
 		overflow: hidden;
 	}
 	.slider__item__title {
@@ -497,10 +552,10 @@ footer {
 		font-weight: 300;
 		line-height: 27px;
 	}
-	.slider__item__image {
+	.slider__image {
 		float: right;
 		width: 35.6%;
-    	margin: -3% 6.2% 0% 11%;
+    	margin: -3% 2.6% 0% 3%;
 	}
 	.slider__nav {
 		float: right; 
@@ -673,10 +728,18 @@ footer {
 		position: relative;
 		margin-bottom: 99px;
 	}
+	.slider__arrow1 {
+		margin-top: 21%;
+		margin-left: -0.8%;
+	}
+	.slider__arrow2 {
+		margin-top: 21%;
+		margin-right: -0.6%;
+	}
 	.slider__item__description {
 		float: left;
 		margin-top: 88px;
-		margin-left: 8%;
+		margin-left: 2%;
 	}
 	.slider__item__sub-title {
 		font-size: 16px;
@@ -684,7 +747,7 @@ footer {
 	.slider__item__text {
 		display: none;
 	}
-	.slider__item__image {
+	.slider__image {
 		float: right;
 		margin-top: -2%;
 		margin-right: 6.7%;
@@ -855,6 +918,15 @@ footer {
 	.slider {
 		height: 224px;
 	}
+
+	.slider__arrow1 {
+		margin-top: 4%;
+		margin-left: -0.8%;
+	}
+	.slider__arrow2 {
+		margin-top: 4%;
+		margin-right: -0.6%;
+	}
 	.slider__item {
 		text-align: center;
 	}
@@ -940,16 +1012,16 @@ footer {
 	.logos4 {
 		margin-top: 56px;
 		margin-left: 20%;
+		margin-bottom: 10px;
 	}
 	.logos5 {
-		display: none;
-		margin-left: 19%;
+		margin-left: 13%;
 	}
 	.logos6 {
-		margin-top: 40px;
-		margin-left: 21%;
+		margin-top: 30px;
+		margin-left: 18%;
 	}
-	.slider__item__text, .slider__item__image, .news, .menu__item--footer {
+	.slider__item__text, .slider__image, .news, .menu__item--footer {
 		display: none;
 	}
 	.footer__menu {
