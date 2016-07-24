@@ -465,6 +465,7 @@ footer {
 		letter-spacing: -2px;
 		font: 400 48px "League Gothic", Tahoma;
 		color: #454545;
+		text-shadow: 0 1px 0 #fff;
 	}
 	.news__title1--960-only span {
 		color: #b9b9b9;
